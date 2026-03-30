@@ -23,7 +23,6 @@ class StudentScheduleController extends Controller
 
         $data = $response->json();
 
-        // الـ API بترجع Token بحرف كبير T
         if ($response->failed() || !isset($data['Token'])) {
             return response()->json([
                 'message' => 'كلمة المرور او اسم المستخدم خطا'
@@ -59,7 +58,6 @@ class StudentScheduleController extends Controller
 
         $loginData = $loginResponse->json();
 
-        // الـ API بترجع Token بحرف كبير T
         if ($loginResponse->failed() || !isset($loginData['Token'])) {
             return response()->json([
                 'message' => 'كلمة المرور او اسم المستخدم خطا'
